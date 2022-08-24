@@ -9,7 +9,7 @@ function get_todos() {
 function add() {
     var task = document.getElementById('input_btn').value
     if (task == '') {
-        alert('Task Name must be filled out') //fix a typo
+        alert('Task Namee must be filled out')
     } else {
         var todos = get_todos()
         todos.push(task)
