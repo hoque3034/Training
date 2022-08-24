@@ -4,13 +4,13 @@ body {
     font-family: cursive;
 }
 #main {
-    background-color: tan;
+    background-color: rgb(140, 208, 248);
     width: 800px;
     height: auto;
     margin: auto auto;
     text-align: center;
     border-radius: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 #input_btn {
     width: 350px;
