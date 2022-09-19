@@ -52,6 +52,7 @@ function show() {
     }
     html += '</ul>'
 
+//new line
     document.getElementById('todos').innerHTML = html
     var buttons = document.getElementsByClassName('remove')
     for (var i = 0; i < buttons.length; i++) {
