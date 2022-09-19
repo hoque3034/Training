@@ -26,11 +26,21 @@ function clearDeafult(a) {
     }
 }
 function remove() {
-    var id = this.getAttribute('id')
-    var todos = get_todos()
-    todos.splice(id, 1)
-    localStorage.setItem('todo', JSON.stringify(todos))
-    show()
+
+	// Confirmation popup added when removing a task 
+	var confirmation = confirm("Do you want to delete the task?");
+	if (confirmation == true) {
+		var id = this.getAttribute('id')
+		var todos = get_todos()
+		todos.splice(id, 1)
+		localStorage.setItem('todo', JSON.stringify(todos))
+		show()
+	}
+	else {
+      show()
+	}	
+
+    
 
     return false
 }
@@ -47,5 +57,9 @@ function show() {
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove)
     }
+	//remove the textbox text if add_task is clicked
+	var task_text = document.getElementById('input_btn')
+	task_text.value = ''
+	
 }
 document.getElementById('btn').addEventListener('click', add)
