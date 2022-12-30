@@ -44,6 +44,17 @@ function remove() {
 
     return false
 }
+
+function jsFunction() {
+  //document.getElementById("js").submit();
+  var first_number = parseInt(document.getElementById("val1").value);
+  var second_number = parseInt(document.getElementById("val2").value);
+  var result = first_number + second_number;
+  document.getElementById("mathRes").innerHTML = "Value:" + result;
+  if (Number.isInteger(result) ==false)
+      document.getElementById("mathRes").innerHTML = "Must add numbers! -_-"
+}
+
 function show() {
     var todos = get_todos()
     var html = '<ul>'
